@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stafflytics | Recruitment Partner</title>
+    <meta
+      name="description"
+      content="Stafflytics helps SaaS and growth businesses build revenue talent pipelines through careful, selective, quality-led recruitment."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Calistoga&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="container nav-row">
+          <a class="brand" href="#top" aria-label="Stafflytics home">
+            <span class="brand-copy">
+              <span class="brand-topline">
+                <span class="brand-name">Staff<span>lytics</span></span>
+              </span>
+            </span>
+          </a>
+
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <nav class="site-nav" id="site-nav">
+            <a href="#specialties">Specialties</a>
+            <a href="#process">Process</a>
+            <a href="#clients">For employers</a>
+            <button class="button button--primary button--small js-open-contact" type="button">Book a call</button>
+          </nav>
+        </div>
+      </header>
+
+      <main id="top">
+        <section class="hero">
+          <div class="hero-bg"></div>
+          <canvas class="hero-signal-canvas" id="hero-signal-canvas" aria-hidden="true"></canvas>
+          <div class="container hero-grid">
+            <div class="hero-copy reveal">
+              <div class="section-label section-label--ghost">
+                <span class="section-label__dot"></span>
+                <span>Modern recruitment partner</span>
+              </div>
+              <h1>
+                Build revenue teams with more <span class="gradient-text">signal</span> and less noise.
+              </h1>
+              <p>
+                Here at Stafflytics, we help ambitious businesses build revenue talent pipelines, starting with BDR and
+                SDR talent before moving into customer success, product, solutions engineering, and senior sales hires.
+              </p>
+              <div class="hero-actions">
+                <button class="button button--primary js-open-contact" type="button">Get in touch</button>
+                <a class="button button--ghost" href="#process">See how it works</a>
+              </div>
+            </div>
+
+            <div class="hero-visual reveal reveal-delay">
+              <div class="orbit"></div>
+              <div class="glow glow--left"></div>
+              <div class="glow glow--right"></div>
+
+              <article class="float-card card-velocity">
+                <div class="card-heading">
+                  <div>
+                    <p class="eyebrow">Revenue talent pipeline</p>
+                    <h3>No CV spraying</h3>
+                  </div>
+                  <div class="icon-chip icon-chip--blue">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="M11 4a7 7 0 1 0 4.7 12.2l3.55 3.55 1.4-1.4-3.55-3.55A7 7 0 0 0 11 4Zm0 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <p class="card-note">
+                  Every introduction is targeted, qualified, and tied to the revenue outcomes your next hire needs to deliver.
+                </p>
+                <div class="signal-loop" aria-hidden="true">
+                  <span class="signal-loop__track"></span>
+                  <span class="signal-loop__pulse signal-loop__pulse--one"></span>
+                  <span class="signal-loop__pulse signal-loop__pulse--two"></span>
+                  <span class="signal-loop__pulse signal-loop__pulse--three"></span>
+                  <span class="signal-loop__gate"></span>
+                </div>
+              </article>
+
+              <article class="float-card card-pipeline">
+                <div class="media-row">
+                  <div class="icon-chip icon-chip--dark">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="M16 11a4 4 0 1 0-3.999-4A4 4 0 0 0 16 11Zm-8 1a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm8 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4ZM8 14c-.29 0-.62.01-.97.04C4.74 14.23 0 15.38 0 18v2h6v-2c0-1.54.82-2.88 2.22-3.92A7.85 7.85 0 0 0 8 14Z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="eyebrow">Focused GTM hiring across</p>
+                    <h3>Revenue-critical roles</h3>
+                  </div>
+                </div>
+                <div class="stack-list">
+                  <div><span>BDR / SDR</span></div>
+                  <div><span>Customer Success</span></div>
+                  <div><span>Product &amp; Solutions</span></div>
+                  <div><span>Account Executive</span></div>
+                </div>
+              </article>
+
+              <article class="float-card card-screening">
+                <div class="media-row">
+                  <div class="icon-chip icon-chip--soft">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="m12 2 7 3v6c0 5-3.4 9.74-7 11-3.6-1.26-7-6-7-11V5l7-3Zm-1 14 6-6-1.4-1.4-4.6 4.6-2.6-2.6L7 11.9 11 16Z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="eyebrow">Screening depth</p>
+                    <h3>High-signal shortlist</h3>
+                  </div>
+                </div>
+                <p>
+                  Prospecting ability, commercial judgement, customer empathy, salary band, and notice period all verified
+                  before intro.
+                </p>
+              </article>
+
+              <div class="dot-grid" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span
+                ><span></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="metrics">
+          <div class="container metrics-grid">
+            <article class="metric reveal">
+              <h3>Verified</h3>
+              <p>Core details checked before introduction, giving clearer insight before interviews and pipeline decisions.</p>
+            </article>
+            <article class="metric reveal">
+              <h3>Qualified</h3>
+              <p>Candidates matched to the brief with clear alignment on revenue skills, motivation, and fit.</p>
+            </article>
+            <article class="metric reveal">
+              <h3>Targeted</h3>
+              <p>Focused shortlists built around BDR, SDR, CSM, product, solutions, and AE talent pools.</p>
+            </article>
+            <article class="metric reveal">
+              <h3>Connected</h3>
+              <p>Strong reach across trusted talent networks, helping us engage credible people in the right markets.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section section-light" id="specialties">
+          <div class="container">
+            <div class="section-intro reveal">
+              <div class="section-label">
+                <span class="section-label__dot"></span>
+                <span>Core specialties</span>
+              </div>
+              <h2>Recruitment built for <span class="gradient-text">teams</span> that need precision.</h2>
+              <p>
+                The strongest searches happen when the recruiter understands the revenue motion, the customer context,
+                and what a genuinely good hire needs to deliver.
+              </p>
+            </div>
+
+            <div class="card-grid card-grid--three">
+              <article class="info-card reveal">
+                <div class="icon-chip icon-chip--blue">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M9 4h6a2 2 0 0 1 2 2v1h3a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h3V6a2 2 0 0 1 2-2Zm0 3h6V6H9v1Zm-5 4v7h16v-7h-6v2h-4v-2H4Z"
+                    />
+                  </svg>
+                </div>
+                <h3>Growth-Critical Hires</h3>
+                <p>BDR, SDR, customer success, and AE hires who create pipeline, progress revenue, and protect customer growth.</p>
+                <button
+                  class="text-link js-open-specialty"
+                  type="button"
+                  data-specialty="revenue"
+                >
+                  Learn more
+                </button>
+              </article>
+
+              <article class="info-card reveal">
+                <div class="icon-chip icon-chip--blue">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M12 2a3 3 0 0 1 3 3v1.1a6.99 6.99 0 0 1 2.83 1.64l.78-.45a3 3 0 1 1 3 5.2l-.78.45a7.12 7.12 0 0 1 0 3.27l.78.45a3 3 0 1 1-3 5.2l-.78-.45A6.99 6.99 0 0 1 15 17.9V19a3 3 0 1 1-6 0v-1.1a6.99 6.99 0 0 1-2.83-1.64l-.78.45a3 3 0 1 1-3-5.2l.78-.45a7.12 7.12 0 0 1 0-3.27l-.78-.45a3 3 0 1 1 3-5.2l.78.45A6.99 6.99 0 0 1 9 6.1V5a3 3 0 0 1 3-3Zm0 7a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"
+                    />
+                  </svg>
+                </div>
+                <h3>Core Team Roles</h3>
+                <p>Customer-facing and product-adjacent hires who keep revenue teams organised, responsive, and ready to deliver.</p>
+                <button
+                  class="text-link js-open-specialty"
+                  type="button"
+                  data-specialty="operations"
+                >
+                  Learn more
+                </button>
+              </article>
+
+              <article class="info-card reveal">
+                <div class="icon-chip icon-chip--blue">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M3 19h18v2H3v-2Zm2-2V9h3v8H5Zm5 0V3h4v14h-4Zm6 0v-6h3v6h-3Z"
+                    />
+                  </svg>
+                </div>
+                <h3>Tailored Search</h3>
+                <p>Focused support for scarce or specialist GTM hires where technical understanding and commercial judgement matter.</p>
+                <button
+                  class="text-link js-open-specialty"
+                  type="button"
+                  data-specialty="specialist"
+                >
+                  Learn more
+                </button>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section-dark">
+          <div class="section-dark__pattern"></div>
+          <div class="container two-column">
+            <div class="section-intro reveal">
+              <div class="section-label">
+                <span class="section-label__dot"></span>
+                <span>Why Stafflytics</span>
+              </div>
+              <h2>A more human way to reach <span class="gradient-text">better hiring outcomes</span>.</h2>
+              <p>
+                We keep the search clear, personal, and considered: sharper role definition, brand-forward outreach,
+                stronger qualification, and clearer communication with both clients and candidates.
+              </p>
+            </div>
+            <div class="checklist reveal">
+              <article><span>&#10003;</span><p>We focus on revenue talent pipelines, not generic volume recruitment.</p></article>
+              <article><span>&#10003;</span><p>Sharper briefs, stronger employer positioning, and better quality control.</p></article>
+              <article><span>&#10003;</span><p>Brand-forward candidate outreach that gives BDR, SDR, CSM, product, solutions, and AE talent a reason to engage.</p></article>
+              <article><span>&#10003;</span><p>A responsive, personal approach from first conversation to signed offer.</p></article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section-light" id="process">
+          <div class="container">
+            <div class="section-intro reveal">
+              <div class="section-label">
+                <span class="section-label__dot"></span>
+                <span>How we work</span>
+              </div>
+              <h2>A clearer journey from brief to <span class="gradient-text">accepted offer</span>.</h2>
+            </div>
+
+            <div class="process-grid">
+              <article class="process-card reveal">
+                <span class="process-step">01</span>
+                <h3>Calibrate the brief</h3>
+                <p>We sharpen the role around revenue outcomes, required skills, compensation, and team shape so the search starts with precision.</p>
+              </article>
+              <article class="process-card reveal">
+                <span class="process-step">02</span>
+                <h3>Targeted search</h3>
+                <p>We map the relevant revenue talent pool, speak with the right people directly, and understand motivation as well as role fit.</p>
+              </article>
+              <article class="process-card reveal">
+                <span class="process-step">03</span>
+                <h3>Shortlist with signal</h3>
+                <p>Every candidate arrives with context: reasons for fit, commercial strengths, salary expectations, availability, and risk flags.</p>
+              </article>
+              <article class="process-card reveal">
+                <span class="process-step">04</span>
+                <h3>Close with confidence</h3>
+                <p>We keep conversations moving, handle concerns openly, and help both sides reach a confident decision.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section-cta" id="clients">
+          <div class="container">
+            <div class="cta-shell reveal">
+              <div class="cta-copy">
+                <div class="section-label">
+                  <span class="section-label__dot"></span>
+                  <span>For employers</span>
+                </div>
+                <h2>Need a recruiter that can build your <span class="gradient-text">revenue pipeline</span>?</h2>
+                <p>
+                  We work with ambitious teams hiring BDR, SDR, customer success, product, solutions engineering, and sales talent.
+                  Responsive enough to build momentum. Careful enough to protect quality.
+                </p>
+                <div class="hero-actions">
+                  <button class="button button--primary js-open-contact" type="button">Book a hiring call</button>
+                  <a class="button button--ghost" href="#specialties">View hiring focus</a>
+                </div>
+              </div>
+              <div class="card-grid card-grid--two">
+                <article class="mini-info-card">
+                  <div class="icon-chip icon-chip--blue">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18v13H3V7Zm2 2v9h14V9H5ZM7 3h10v2H7V3Z" /></svg>
+                  </div>
+                  <h3>Growing businesses</h3>
+                  <p>Building BDR and SDR benches while keeping pace with growth.</p>
+                </article>
+                <article class="mini-info-card">
+                  <div class="icon-chip icon-chip--blue">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm6.9 9H14V6.1A8.02 8.02 0 0 1 18.9 11ZM12 4c.69 0 1.36.09 2 .25V11H5.1A8 8 0 0 1 12 4Zm0 16a8 8 0 0 1-6.9-4H12v4Zm2 0v-4h4.9A8 8 0 0 1 14 20Z" /></svg>
+                  </div>
+                  <h3>Broader talent reach</h3>
+                  <p>Market mapping and outreach across relevant revenue candidate pools.</p>
+                </article>
+                <article class="mini-info-card">
+                  <div class="icon-chip icon-chip--blue">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C7 3 3 4.79 3 7v10c0 2.21 4 4 9 4s9-1.79 9-4V7c0-2.21-4-4-9-4Zm0 2c4.42 0 7 .99 7 2s-2.58 2-7 2-7-.99-7-2 2.58-2 7-2Zm0 14c-4.42 0-7-.99-7-2v-2.3c1.65 1.01 4.42 1.55 7 1.55s5.35-.54 7-1.55V17c0 1.01-2.58 2-7 2Zm0-5c-4.42 0-7-.99-7-2v-2.3c1.65 1.01 4.42 1.55 7 1.55s5.35-.54 7-1.55V12c0 1.01-2.58 2-7 2Z" /></svg>
+                  </div>
+                  <h3>Brief-led searches</h3>
+                  <p>Clear criteria around prospecting, customer empathy, product fluency, and commercial judgement.</p>
+                </article>
+                <article class="mini-info-card">
+                  <div class="icon-chip icon-chip--blue">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 6V4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8h-2v8H6V6h8Zm6-2h-4v2h2.59l-7.3 7.29 1.41 1.42L20 7.41V10h2V4Z" /></svg>
+                  </div>
+                  <h3>Clear communication</h3>
+                  <p>Helpful updates and honest feedback so decisions feel easier to make.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-row">
+          <a class="brand brand--footer" href="#top" aria-label="Stafflytics home">
+            <span class="brand-copy">
+              <span class="brand-topline">
+                <span class="brand-name">Staff<span>lytics</span></span>
+              </span>
+            </span>
+          </a>
+          <div class="footer-meta">
+            <span>Quality-led recruitment</span>
+            <span>Leeds / UK</span>
+            <span>For ambitious teams</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div class="modal" id="contact-modal" aria-hidden="true">
+      <div class="modal__backdrop js-close-contact"></div>
+      <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
+        <button class="modal__close js-close-contact" type="button" aria-label="Close contact form">&times;</button>
+        <div class="modal__intro">
+          <div class="section-label">
+            <span class="section-label__dot"></span>
+            <span id="contact-modal-kicker">Book a hiring call</span>
+          </div>
+          <h2 id="contact-modal-title">Tell us about your hiring plans.</h2>
+          <p id="contact-modal-copy">
+            Share a few details about the role, team, and timeline, and one of our experienced recruitment consultants
+            will get in touch.
+          </p>
+        </div>
+
+        <form class="contact-form" id="contact-form">
+          <input type="hidden" name="access_key" value="da32efa5-3d35-4d0e-a3bb-0c38c2a72dc3" />
+          <input type="hidden" name="subject" value="New Stafflytics hiring call enquiry" />
+          <input type="hidden" name="from_name" value="Stafflytics Website" />
+          <input type="hidden" name="audience" id="contact-audience" value="client" />
+          <input type="checkbox" name="botcheck" class="sr-only" tabindex="-1" autocomplete="off" />
+
+          <div class="contact-mode-switch" role="tablist" aria-label="Choose enquiry type">
+            <button
+              class="contact-mode-switch__option is-active js-contact-mode"
+              id="contact-mode-client"
+              type="button"
+              role="tab"
+              aria-selected="true"
+              aria-controls="contact-panel-client"
+              data-mode="client"
+            >
+              Client
+            </button>
+            <button
+              class="contact-mode-switch__option js-contact-mode"
+              id="contact-mode-candidate"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="contact-panel-candidate"
+              data-mode="candidate"
+            >
+              Candidate
+            </button>
+          </div>
+
+          <section class="contact-panel is-active" id="contact-panel-client" data-mode-panel="client" role="tabpanel" aria-labelledby="contact-mode-client">
+            <div class="form-grid">
+              <label>
+                <span>Full name</span>
+                <input type="text" name="name" placeholder="Jane Smith" data-mode-required="client" required />
+              </label>
+              <label>
+                <span>Work email</span>
+                <input type="email" name="email" placeholder="jane@company.com" data-mode-required="client" required />
+              </label>
+              <label>
+                <span>Company</span>
+                <input type="text" name="company" placeholder="Acme Group" data-mode-required="client" required />
+              </label>
+              <label>
+                <span>Hiring focus</span>
+                <input type="text" name="hiring_focus" placeholder="Tell us the role or area..." data-mode-required="client" required />
+              </label>
+              <label>
+                <span>Team size</span>
+                <input type="text" name="team_size" placeholder="25 employees" />
+              </label>
+              <label>
+                <span>Target timeline</span>
+                <input type="text" name="timeline" placeholder="Need to hire in 30 days" />
+              </label>
+              <label class="form-grid__full">
+                <span>What do you need help with?</span>
+                <textarea
+                  name="message"
+                  rows="5"
+                  placeholder="Tell us about the role, location, salary band, and what a great outcome looks like."
+                  data-mode-required="client"
+                  required
+                ></textarea>
+              </label>
+            </div>
+          </section>
+
+          <section class="contact-panel" id="contact-panel-candidate" data-mode-panel="candidate" role="tabpanel" aria-labelledby="contact-mode-candidate" hidden>
+            <div class="form-grid">
+              <label>
+                <span>Full name</span>
+                <input type="text" name="candidate_name" placeholder="Alex Morgan" data-mode-required="candidate" />
+              </label>
+              <label>
+                <span>Email address</span>
+                <input type="email" name="candidate_email" placeholder="alex@email.com" data-mode-required="candidate" />
+              </label>
+              <label>
+                <span>Current role</span>
+                <input type="text" name="current_role" placeholder="Senior Account Manager" data-mode-required="candidate" />
+              </label>
+              <label>
+                <span>Location</span>
+                <input type="text" name="candidate_location" placeholder="Leeds / Remote" data-mode-required="candidate" />
+              </label>
+              <label>
+                <span>Role looking for</span>
+                <input type="text" name="target_role" placeholder="Tell us the role or direction..." data-mode-required="candidate" />
+              </label>
+              <label>
+                <span>Availability</span>
+                <input type="text" name="availability" placeholder="Immediate / 1 month notice" />
+              </label>
+              <label class="form-grid__full">
+                <span>Tell us about your background</span>
+                <textarea
+                  name="candidate_message"
+                  rows="5"
+                  placeholder="Share the kind of roles you want, your experience, salary expectations, and anything we should know."
+                  data-mode-required="candidate"
+                ></textarea>
+              </label>
+            </div>
+          </section>
+
+          <div class="form-actions">
+            <button class="button button--primary" id="contact-submit-button" type="submit">Send enquiry</button>
+            <p class="form-note">Your details go straight to Stafflytics and will only be used to respond to your enquiry.</p>
+          </div>
+
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal modal--specialty" id="specialty-modal" aria-hidden="true">
+      <div class="modal__backdrop js-close-specialty"></div>
+      <div class="modal__panel specialty-modal__panel" role="dialog" aria-modal="true" aria-labelledby="specialty-modal-title">
+        <div class="specialty-modal__bg" aria-hidden="true">
+          <span class="specialty-orb specialty-orb--one"></span>
+          <span class="specialty-orb specialty-orb--two"></span>
+          <span class="specialty-orb specialty-orb--three"></span>
+          <div class="specialty-grid"></div>
+        </div>
+
+        <button class="modal__close js-close-specialty" type="button" aria-label="Close specialty details">&times;</button>
+
+        <div class="specialty-modal__content">
+          <div class="section-label">
+            <span class="section-label__dot"></span>
+            <span id="specialty-modal-label">Specialty focus</span>
+          </div>
+          <h2 id="specialty-modal-title">Revenue &amp; Growth</h2>
+          <p class="specialty-modal__lead" id="specialty-modal-lead"></p>
+
+          <div class="specialty-modal__layout">
+            <section class="specialty-copy">
+              <h3>What we typically hire for</h3>
+              <ul class="specialty-list" id="specialty-role-list"></ul>
+            </section>
+
+            <aside class="specialty-sidecard">
+              <h3>What clients usually need</h3>
+              <p id="specialty-modal-side"></p>
+              <div class="specialty-badges" id="specialty-badges"></div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
