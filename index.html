@@ -57,8 +57,10 @@
                 Build revenue teams with more <span class="gradient-text">signal</span> and less noise.
               </h1>
               <p>
-                Here at Stafflytics, we help ambitious businesses build revenue talent pipelines, starting with BDR and
-                SDR talent before moving into customer success, product, solutions engineering, and senior sales hires.
+                Stafflytics helps ambitious businesses hire people who make a measurable commercial impact. We
+                understand that the right hire can increase revenue, improve customer retention, and create new
+                opportunities for growth. That's why we focus on connecting businesses with sales professionals who
+                contribute directly to growth and profitability.
               </p>
               <div class="hero-actions">
                 <button class="button button--primary js-open-contact" type="button">Get in touch</button>
@@ -143,6 +145,23 @@
                 <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span
                 ><span></span>
               </div>
+            </div>
+            <div class="hero-carousel-controls" aria-label="Hero cards navigation">
+              <button class="hero-carousel-arrow hero-carousel-prev" type="button" aria-label="Previous hero card">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m15.4 5.4-1.4-1.4-8 8 8 8 1.4-1.4-6.6-6.6 6.6-6.6Z" />
+                </svg>
+              </button>
+              <div class="hero-carousel-dots" aria-label="Choose a hero card">
+                <button class="is-active" type="button" aria-label="Show hero card 1" aria-current="true"></button>
+                <button type="button" aria-label="Show hero card 2" aria-current="false"></button>
+                <button type="button" aria-label="Show hero card 3" aria-current="false"></button>
+              </div>
+              <button class="hero-carousel-arrow hero-carousel-next" type="button" aria-label="Next hero card">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m8.6 18.6 1.4 1.4 8-8-8-8-1.4 1.4 6.6 6.6-6.6 6.6Z" />
+                </svg>
+              </button>
             </div>
           </div>
         </section>
@@ -339,7 +358,10 @@
                     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C7 3 3 4.79 3 7v10c0 2.21 4 4 9 4s9-1.79 9-4V7c0-2.21-4-4-9-4Zm0 2c4.42 0 7 .99 7 2s-2.58 2-7 2-7-.99-7-2 2.58-2 7-2Zm0 14c-4.42 0-7-.99-7-2v-2.3c1.65 1.01 4.42 1.55 7 1.55s5.35-.54 7-1.55V17c0 1.01-2.58 2-7 2Zm0-5c-4.42 0-7-.99-7-2v-2.3c1.65 1.01 4.42 1.55 7 1.55s5.35-.54 7-1.55V12c0 1.01-2.58 2-7 2Z" /></svg>
                   </div>
                   <h3>Brief-led searches</h3>
-                  <p>Clear criteria around prospecting, customer empathy, product fluency, and commercial judgement.</p>
+                  <p>
+                    Clear expectations for prospecting, understanding customer needs, product knowledge, and business
+                    awareness.
+                  </p>
                 </article>
                 <article class="mini-info-card">
                   <div class="icon-chip icon-chip--blue">
@@ -363,10 +385,17 @@
               </span>
             </span>
           </a>
-          <div class="footer-meta">
-            <span>Quality-led recruitment</span>
-            <span>Leeds / UK</span>
-            <span>For ambitious teams</span>
+          <div class="footer-content">
+            <nav class="footer-legal" aria-label="Legal information">
+              <button class="legal-link js-open-legal" type="button" data-legal="privacy">Privacy Notice</button>
+              <button class="legal-link js-open-legal" type="button" data-legal="cookies">Cookie Policy</button>
+              <button class="legal-link js-open-legal" type="button" data-legal="terms">Website Terms</button>
+              <button class="legal-link" id="cookie-settings" type="button">Cookie settings</button>
+            </nav>
+            <p class="footer-company-details">
+              Stafflytics Ltd | Company number 17182201 | Registered office: 6, 3 Moorland Road, Leeds, LS6 1AL,
+              United Kingdom | Registered in England and Wales | VAT registered
+            </p>
           </div>
         </div>
       </footer>
@@ -388,7 +417,7 @@
           </p>
         </div>
 
-        <form class="contact-form" id="contact-form">
+        <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value="da32efa5-3d35-4d0e-a3bb-0c38c2a72dc3" />
           <input type="hidden" name="subject" value="New Stafflytics hiring call enquiry" />
           <input type="hidden" name="from_name" value="Stafflytics Website" />
@@ -542,6 +571,37 @@
         </div>
       </div>
     </div>
+
+    <div class="modal modal--legal" id="legal-modal" aria-hidden="true">
+      <div class="modal__backdrop js-close-legal"></div>
+      <div class="modal__panel legal-modal__panel" role="dialog" aria-modal="true" aria-labelledby="legal-modal-title">
+        <button class="modal__close js-close-legal" type="button" aria-label="Close legal document">&times;</button>
+        <div class="section-label">
+          <span class="section-label__dot"></span>
+          <span>Legal information</span>
+        </div>
+        <h2 id="legal-modal-title">Privacy Notice</h2>
+        <div class="legal-modal__content" id="legal-modal-content"></div>
+      </div>
+    </div>
+
+    <aside class="cookie-banner" id="cookie-banner" aria-label="Cookie notice" aria-live="polite">
+      <div class="cookie-banner__copy">
+        <strong>Your privacy matters</strong>
+        <p>
+          We use cookies to support the website experience. Please review our
+          <button class="legal-link js-open-legal" type="button" data-legal="cookies">Cookie Policy</button>,
+          <button class="legal-link js-open-legal" type="button" data-legal="privacy">Privacy Notice</button>, and
+          <button class="legal-link js-open-legal" type="button" data-legal="terms">Website Terms</button>.
+        </p>
+      </div>
+      <div class="cookie-banner__actions">
+        <button class="button button--ghost button--small" id="reject-cookies" type="button">
+          Reject non-essential
+        </button>
+        <button class="button button--primary button--small" id="accept-cookies" type="button">Accept cookies</button>
+      </div>
+    </aside>
 
     <script src="script.js"></script>
   </body>
