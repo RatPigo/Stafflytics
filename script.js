@@ -45,7 +45,8 @@ const legalContent = {
       <p><strong>Stafflytics Ltd</strong><br />6, 3 Moorland Road<br />Leeds<br />LS6 1AL</p>
       <p>
         Email: <a href="mailto:recruitment@stafflytics.uk">recruitment@stafflytics.uk</a><br />
-        Website: <a href="https://stafflytics.uk/">https://stafflytics.uk/</a>
+        Website: <a href="https://stafflytics.uk/">https://stafflytics.uk/</a><br />
+        ICO Data Registration Reference ZC161467
       </p>
 
       <h3>1. Who We Are</h3>
