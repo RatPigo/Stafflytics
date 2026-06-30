@@ -7,6 +7,7 @@ const heroCarouselPrev = document.querySelector(".hero-carousel-prev");
 const heroCarouselNext = document.querySelector(".hero-carousel-next");
 const heroCarouselDots = Array.from(document.querySelectorAll(".hero-carousel-dots button"));
 const heroSignalCanvas = document.querySelector("#hero-signal-canvas");
+const roleTeamTriggers = Array.from(document.querySelectorAll(".role-team__trigger"));
 const contactModal = document.querySelector("#contact-modal");
 const contactForm = document.querySelector("#contact-form");
 const formStatus = document.querySelector("#form-status");
@@ -37,6 +38,20 @@ const cookieBanner = document.querySelector("#cookie-banner");
 const acceptCookiesButton = document.querySelector("#accept-cookies");
 const rejectCookiesButton = document.querySelector("#reject-cookies");
 const cookieSettingsButton = document.querySelector("#cookie-settings");
+
+roleTeamTriggers.forEach((trigger) => {
+  let bounceTimer = 0;
+
+  trigger.addEventListener("click", () => {
+    window.clearTimeout(bounceTimer);
+    trigger.classList.remove("is-bouncing");
+    void trigger.offsetWidth;
+    trigger.classList.add("is-bouncing");
+    bounceTimer = window.setTimeout(() => {
+      trigger.classList.remove("is-bouncing");
+    }, 900);
+  });
+});
 
 const legalContent = {
   privacy: {
@@ -365,7 +380,7 @@ const legalContent = {
 
 const specialtyContent = {
   revenue: {
-    label: "Growth-Critical Hires",
+    label: "Business-critical hiring",
     title: "Important hires who can create momentum quickly.",
     lead:
       "We support businesses looking for people who can add energy, ownership, and measurable progress in roles that matter to growth.",
@@ -407,7 +422,7 @@ const specialtyContent = {
     ],
     side:
       "The strongest briefs here usually need more than a keyword match. They need context, qualification, and a clear understanding of what success looks like.",
-    badges: ["Precision", "Senior Hires", "Discretion", "Fit", "Hard-to-Find"],
+    badges: ["Precision", "Senior Hires", "Confidential delivery", "Long-term fit", "Hard-to-reach candidates"],
   },
 };
 

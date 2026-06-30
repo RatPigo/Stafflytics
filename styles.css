@@ -455,6 +455,7 @@ h2 {
   right: 0;
   top: 4.5rem;
   width: min(18rem, 84vw);
+  z-index: 2;
   animation: bob 4.5s ease-in-out infinite 0.4s;
 }
 
@@ -611,6 +612,182 @@ h2 {
   color: var(--muted);
 }
 
+.role-team {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 0.82fr 1fr;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 1.05rem;
+  min-height: 6.4rem;
+  padding: 0.9rem;
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  border-radius: 1.35rem;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(49, 187, 255, 0.18), transparent 29%),
+    radial-gradient(circle at 18% 35%, rgba(0, 82, 255, 0.08), transparent 26%),
+    linear-gradient(180deg, rgba(248, 251, 255, 0.98), rgba(234, 247, 255, 0.92));
+  overflow: hidden;
+}
+
+.role-team::before,
+.role-team::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.role-team::before {
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.12) 1px, transparent 1px);
+  background-size: 1.25rem 1.25rem;
+  mask-image: radial-gradient(circle at 50% 50%, #000 0 35%, transparent 72%);
+  opacity: 0.6;
+}
+
+.role-team::after {
+  border-radius: inherit;
+  box-shadow: inset 0 0 28px rgba(0, 82, 255, 0.08);
+  animation: roleSceneGlow 3.8s ease-in-out infinite;
+}
+
+.role-team__person,
+.role-team__role {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.role-team__person {
+  width: 3.7rem;
+  height: 3.7rem;
+  justify-self: center;
+  border-radius: 1.25rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(241, 249, 255, 0.94));
+  box-shadow:
+    inset 0 0 0 1px rgba(49, 187, 255, 0.22),
+    0 12px 28px rgba(0, 82, 255, 0.1);
+  animation: roleWorkerFocus 3.8s ease-in-out infinite;
+}
+
+.role-team__person--two {
+  animation-delay: 0.6s;
+}
+
+.role-team__avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.45rem;
+  height: 2.45rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0052ff, #31bbff);
+  color: #fff;
+  box-shadow: 0 12px 22px rgba(0, 82, 255, 0.22);
+}
+
+.role-team__avatar svg {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+.role-team__role {
+  width: 3.95rem;
+  height: 3.95rem;
+  justify-self: center;
+  border: 1px solid rgba(49, 187, 255, 0.26);
+  border-radius: 1.2rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(235, 248, 255, 0.96));
+  color: #0052ff;
+  box-shadow:
+    0 16px 35px rgba(0, 82, 255, 0.13),
+    inset 0 0 0 6px rgba(49, 187, 255, 0.1);
+  animation: rolePulse 3.8s ease-in-out infinite;
+}
+
+.role-team__role svg {
+  width: 1.55rem;
+  height: 1.55rem;
+}
+
+.role-team__trigger:focus-visible {
+  outline: 3px solid rgba(49, 187, 255, 0.34);
+  outline-offset: 3px;
+}
+
+.role-team__trigger.is-bouncing .role-team__avatar,
+.role-team__role.is-bouncing svg {
+  animation: roleIconClickBounce 460ms cubic-bezier(0.2, 0.9, 0.28, 1.35);
+}
+
+.role-team__line {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  width: 24%;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(0, 82, 255, 0), rgba(0, 82, 255, 0.45), rgba(49, 187, 255, 0));
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+
+.role-team__line::after {
+  content: "";
+  position: absolute;
+  inset: -2px auto -2px 0;
+  width: 42%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, transparent, #31bbff, #0052ff);
+  filter: blur(1px);
+  animation: roleLineFlow 1.8s ease-in-out infinite;
+}
+
+.role-team__line--left {
+  left: 26.5%;
+}
+
+.role-team__line--right {
+  right: 26.5%;
+  transform: translateY(-50%) scaleX(-1);
+}
+
+.role-team__line--right::after {
+  animation-delay: 0.28s;
+}
+
+.role-team__spark {
+  position: absolute;
+  z-index: 3;
+  width: 0.42rem;
+  height: 0.42rem;
+  border-radius: 50%;
+  background: #31bbff;
+  box-shadow: 0 0 0 7px rgba(49, 187, 255, 0.12);
+  opacity: 0;
+  animation: roleSpark 3.8s ease-in-out infinite;
+}
+
+.role-team__spark--one {
+  left: 29%;
+  top: 35%;
+}
+
+.role-team__spark--two {
+  right: 29%;
+  bottom: 33%;
+  animation-delay: 0.55s;
+}
+
 .card-screening p {
   margin: 1rem 0 0;
   color: var(--muted);
@@ -678,7 +855,7 @@ h2 {
 }
 
 .metric {
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   align-items: flex-start;
   min-height: 9.5rem;
@@ -709,6 +886,7 @@ h2 {
 }
 
 .card-grid--three {
+  align-items: stretch;
   grid-template-columns: repeat(3, 1fr);
   margin-top: 2.5rem;
 }
@@ -724,6 +902,8 @@ h2 {
 }
 
 .info-card {
+  display: flex;
+  flex-direction: column;
   padding: 1.8rem;
 }
 
@@ -742,7 +922,9 @@ h2 {
 }
 
 .info-card .text-link {
-  margin-top: 1rem;
+  margin-top: auto;
+  padding-top: 1.25rem;
+  align-self: flex-start;
 }
 
 .section-dark {
@@ -1464,6 +1646,88 @@ h2 {
   }
 }
 
+@keyframes roleWorkerFocus {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow:
+      inset 0 0 0 1px rgba(49, 187, 255, 0.28),
+      0 14px 26px rgba(0, 82, 255, 0.13);
+  }
+}
+
+@keyframes rolePulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 16px 35px rgba(0, 82, 255, 0.12);
+  }
+  50% {
+    transform: scale(1.07);
+    box-shadow:
+      0 22px 46px rgba(0, 82, 255, 0.18),
+      0 0 0 9px rgba(49, 187, 255, 0.13);
+  }
+}
+
+@keyframes roleLineFlow {
+  0% {
+    left: -40%;
+    opacity: 0;
+  }
+  20%,
+  80% {
+    opacity: 1;
+  }
+  100% {
+    left: 105%;
+    opacity: 0;
+  }
+}
+
+@keyframes roleSceneGlow {
+  0%,
+  100% {
+    opacity: 0.65;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes roleIconClickBounce {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  38% {
+    transform: translateY(-5px) scale(1.08);
+  }
+  68% {
+    transform: translateY(1px) scale(0.98);
+  }
+}
+
+@keyframes roleSpark {
+  0%,
+  42%,
+  100% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  52% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  68% {
+    opacity: 0;
+    transform: scale(1.4);
+  }
+}
+
 @media (max-width: 1080px) {
   .hero-grid,
   .two-column,
@@ -1759,7 +2023,12 @@ h2 {
 @media (prefers-reduced-motion: reduce) {
   .card-velocity,
   .card-pipeline,
-  .card-screening {
+  .card-screening,
+  .role-team::after,
+  .role-team__person,
+  .role-team__role,
+  .role-team__line::after,
+  .role-team__spark {
     animation: none;
   }
 
